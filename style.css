@@ -1,0 +1,824 @@
+/*
+0 - 600px                        phone
+600px - 900px                    tablet portrait
+900px - 1200px                   tablet landscape
+1200px is where the normal style is applied
+1800px +                         big destop   
+*/
+/*
+$breakpiont arguement chocies:
+
+-phone
+-tab-port
+-tab-land
+-big-desktop
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none !important;
+  list-style: none;
+  outline: none;
+}
+
+.about {
+  padding: 10rem 0;
+}
+
+.about .title {
+  position: relative;
+  text-align: center;
+  font-size: 4rem;
+  font-weight: bold;
+  margin-bottom: 6rem;
+  padding-bottom: 3rem;
+}
+
+@media (max-width: 300px) {
+  .about .title {
+    font-size: 2rem;
+    padding-bottom: 4rem;
+  }
+}
+
+.about .title::before {
+  content: '';
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  width: 18rem;
+  height: .3rem;
+  background-color: crimson;
+  transform: translateX(-50%);
+}
+
+.about .title::after {
+  content: 'Who am i';
+  position: absolute;
+  bottom: -.7rem;
+  left: 50%;
+  font-size: 2rem;
+  padding: .5rem;
+  transform: translateX(-50%);
+  background: #fff;
+  font-weight: bold;
+}
+
+@media (max-width: 300px) {
+  .about .title::after {
+    font-size: 1.5rem;
+  }
+}
+
+.about .about-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 947px) {
+  .about .about-content .content {
+    max-width: 80rem;
+  }
+}
+
+.about .about-content .column {
+  width: 50%;
+}
+
+@media (max-width: 947px) {
+  .about .about-content .column {
+    width: 100%;
+  }
+}
+
+.about .about-content .left {
+  width: 45%;
+}
+
+@media (max-width: 947px) {
+  .about .about-content .left {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto 6rem;
+  }
+}
+
+.about .about-content .left img {
+  height: 40rem;
+  width: 40rem;
+  object-fit: cover;
+  border-radius: .6rem;
+}
+
+@media (max-width: 1104px) {
+  .about .about-content .left img {
+    height: 35rem;
+    width: 35rem;
+  }
+}
+
+.about .about-content .right {
+  text-align: justify;
+  width: 55%;
+}
+
+@media (max-width: 947px) {
+  .about .about-content .right {
+    flex: 100%;
+  }
+}
+
+.about .about-content .right .text {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 337px) {
+  .about .about-content .right .text {
+    font-size: 1.8rem;
+  }
+}
+
+.about .about-content .right .text span {
+  color: crimson;
+}
+
+.about .about-content .right submit{
+  display: inline-block;
+  background: linear-gradient(to right, crimson, #111);
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 500;
+  padding: 1rem 3rem;
+  margin-top: 2rem;
+  border: .3rem solid crimson;
+  transition: all .3s ease;
+  outline: none;
+}
+
+@media (max-width: 279px) {
+  .about .about-content .right submit {
+    font-size: 1.5rem;
+  }
+}
+
+.about .about-content .right submit:hover {
+  background-color: transparent;
+  color: crimson;
+  font-weight: 500;
+}
+
+.about .about-content .right p {
+  font-size: 1.6rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none !important;
+  list-style: none;
+  outline: none;
+}
+
+.service {
+  background: #111;
+  color: #000;
+}
+
+.service .service-content .main {
+  width: 100%;
+  min-height: 38rem;
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+}
+
+.service .service-content .main:hover {
+  transform: scale(1.02);
+}
+
+.service .service-content .main .service-sub {
+  background: #222;
+  padding: 3rem;
+  border-radius: .5rem;
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+  margin-bottom: 5rem;
+  transition: all .3s ease-in-out;
+}
+
+.service .service-content .main .service-sub:hover {
+  background-color: rgba(220, 20, 60, 0.802);
+}
+
+.service .service-content .main .service-sub h4, .service .service-content .main .service-sub p {
+  font-size: 1.6rem;
+  color: #fff;
+}
+
+.service .service-content .main .service-sub h4 {
+  height: 3.8rem;
+  width: 90%;
+  background: #222;
+  margin: 3rem auto;
+  position: relative;
+  line-height: 3.5rem;
+}
+
+.service .service-content .main .service-sub h4::after {
+  content: '';
+  width: 4rem;
+  height: 3rem;
+  background: linear-gradient(to right, crimson, #111);
+  position: absolute;
+  top: -.5rem;
+  right: -.5rem;
+  z-index: -1;
+}
+
+.service .service-content .main .service-sub h4::before {
+  content: '';
+  width: 4rem;
+  height: 3rem;
+  background: linear-gradient(to left, crimson, #111);
+  position: absolute;
+  bottom: -.5rem;
+  left: -.5rem;
+  z-index: -1;
+}
+
+.service .service-content .main .service-sub .s-logo {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  margin: -9rem auto 0;
+  background: linear-gradient(to left, crimson, #111);
+  border: 1.4rem solid #111;
+  transition: transform 1s;
+}
+
+.service .service-content .main .service-sub .s-logo:hover {
+  transform: rotate(360deg);
+}
+
+.service .service-content .main .service-sub .s-logo i {
+  width: 5rem;
+  font-size: 4rem;
+  line-height: 11rem;
+  color: #fff;
+}
+
+.service .title {
+  color: #fff;
+  position: relative;
+  text-align: center;
+  font-size: 4rem;
+  font-weight: bold;
+  margin-bottom: 6rem;
+  padding-bottom: 3rem;
+  padding-top: 3rem;
+}
+
+@media (max-width: 300px) {
+  .service .title {
+    font-size: 2rem;
+    padding-bottom: 4rem;
+  }
+}
+
+.service .title::before {
+  content: '';
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  width: 18rem;
+  height: .3rem;
+  background-color: crimson;
+  transform: translateX(-50%);
+}
+
+.service .title::after {
+  content: 'My service';
+  position: absolute;
+  bottom: -.7rem;
+  left: 50%;
+  font-size: 2rem;
+  padding: .5rem;
+  transform: translateX(-50%);
+  background: #111;
+  color: #fff;
+  font-weight: bold;
+}
+
+@media (max-width: 300px) {
+  .service .title::after {
+    font-size: 1.5rem;
+  }
+}
+
+* {
+  padding: 0;
+  /*margin: 0;*/
+  list-style: none;
+  font-family: sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.mother {
+  /*position: absolute;*/
+  width: 100%;
+  margin: 6rem auto;
+  color:#fff;
+}
+
+.mother li {
+  margin: 3rem 0;
+}
+
+.my_span {
+  display: block;
+ background: linear-gradient(to right, crimson, #111);
+  height: 1.5rem;
+  border: 0.1rem solid crimson;
+  box-shadow: 0 0 1rem crimson;
+  border-radius: 0.3rem;
+}
+
+.my_span span {
+  height: 1.3rem;
+  float: left;
+  background: linear-gradient(to left, crimson, #111); 
+  border-radius: 0.3rem;
+}
+
+.html {
+  width: 90%;
+  animation: animation 1s;
+}
+
+.CSS {
+  width: 70%;
+  animation: animationi 1s;
+}
+
+.jQuary {
+  width: 50%;
+  animation: animationt 1s;
+}
+
+.bootstrap {
+  width: 75%;
+  animation: animationo 1s;
+}
+
+@keyframes animation {
+  0% {
+    width: 0;
+    opacity: 0.5;
+  }
+  100% {
+    width: 90%;
+    opacity: 1;
+  }
+}
+
+@keyframes animationi {
+  0% {
+    width: 0;
+    opacity: 0.5;
+  }
+  100% {
+    width: 70%;
+    opacity: 1;
+  }
+}
+
+@keyframes animationt {
+  0% {
+    width: 0;
+    opacity: 0.5;
+  }
+  100% {
+    width: 50%;
+    opacity: 1;
+  }
+}
+
+@keyframes animationo {
+  0% {
+    width: 0;
+    opacity: 0.5;
+  }
+  100% {
+    width: 75%;
+    opacity: 1;
+  }
+}
+
+.skills {
+  background-color: #222;
+}
+
+.skills .container.skill .title {
+  color: #fff;
+  position: relative;
+  text-align: center;
+  font-size: 4rem;
+  font-weight: bold;
+  margin-bottom: 6rem;
+  padding-bottom: 3rem;
+  padding-top: 3rem;
+}
+
+@media (max-width: 300px) {
+  .skills .container.skill .title {
+    font-size: 2rem;
+    padding-bottom: 4rem;
+  }
+}
+
+.skills .container.skill .title::before {
+  content: '';
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  width: 18rem;
+  height: .3rem;
+  background-color: crimson;
+  transform: translateX(-50%);
+}
+
+.skills .container.skill .title::after {
+  content: 'My Skills';
+  position: absolute;
+  bottom: -.7rem;
+  left: 50%;
+  font-size: 2rem;
+  padding: .5rem;
+  transform: translateX(-50%);
+  background: #222;
+  font-weight: bold;
+}
+
+@media (max-width: 300px) {
+  .skills .container.skill .title::after {
+    font-size: 1.5rem;
+  }
+}
+
+.skills .container.skill .box {
+  border-radius: .5rem;
+  margin: 4rem 2rem;
+}
+.skills .container {
+				height: 50vh;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+@media (max-width: 991px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media (max-width: 1200px) {
+  html {
+    font-size: 56.25%;
+  }
+}
+
+@media (min-width: 1800px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none !important;
+  list-style: none;
+}
+
+.content {
+  max-width: 1250px;
+  margin: auto;
+  padding: 0 3rem;
+}
+
+@media (max-width: 1104px) {
+  .content {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 868px) {
+  .content {
+    padding: 0 5rem;
+  }
+}
+
+.navbarr {
+  position: fixed;
+  width: 100%;
+  padding: 1rem 0;
+  z-index: 999;
+}
+
+.navbarr.sticky {
+  background-color: #1b1b1b;
+  padding: 1rem 0;
+  transition: all .1s ease-in-out;
+  box-shadow: .1rem .1rem 1rem gray;
+}
+
+.navbarr .icon {
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+  display: none;
+}
+
+@media (max-width: 868px) {
+  .navbarr .icon {
+    display: block;
+  }
+}
+
+.navbarr .icon.hide {
+  display: none;
+}
+
+.navbarr .content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbarr .logo {
+  margin-left: 4rem;
+}
+
+@media (max-width: 600px) {
+  .navbarr .logo {
+    margin-left: 0;
+  }
+}
+
+.navbarr .logo a {
+  color: #fff;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+@media (max-width: 868px) {
+  .navbarr .logo a {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbarr .logo a {
+    font-size: 2rem;
+  }
+}
+
+.navbarr .logo a span {
+  font-size: 4rem;
+  color: crimson;
+}
+
+@media (max-width: 600px) {
+  .navbarr .logo a span {
+    font-size: 2rems;
+  }
+}
+
+@media (max-width: 868px) {
+  .navbarr .logo a span {
+    font-size: 3rem;
+  }
+}
+
+.navbarr .menu-list {
+  display: inline-flex;
+}
+
+@media (max-width: 868px) {
+  .navbarr .menu-list {
+    position: fixed;
+    left: -100%;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #222;
+    max-width: 40rem;
+    display: block;
+    padding: 4rem 0;
+    text-align: center;
+    transition: all 1s ease-in-out;
+  }
+  .navbarr .menu-list.active {
+    left: 0;
+  }
+}
+
+.navbarr .menu-list .icon {
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+  display: none;
+  position: absolute;
+  top: 2rem;
+  right: 3rem;
+}
+
+@media (max-width: 868px) {
+  .navbarr .menu-list .icon {
+    display: block;
+  }
+}
+
+@media (max-width: 868px) {
+  .navbarr .menu-list li {
+    margin-top: 4.5rem;
+  }
+}
+
+.navbarr .menu-list li a {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 400;
+  margin-left: 2.2rem;
+  transition: all .1s ease-in-out;
+}
+
+.navbarr .menu-list li a:hover {
+  color: crimson;
+}
+
+@media (max-width: 868px) {
+  .navbarr .menu-list li a {
+    font-size: 2rem;
+  }
+}
+
+.home {
+  display: flex;
+  height: 100vh;
+  background: url("../assets/img/ima.jpg") no-repeat left;
+  background-size: cover;
+  color: #fff;
+  min-height: 50rem;
+}
+
+@media (max-width: 600px) {
+  .home {
+    height: 80vh;
+  }
+}
+
+.home .content {
+  margin: auto 0 auto 4rem;
+}
+
+.home .content .home-content {
+  border-left: .5rem solid crimson;
+  padding: 0 1rem;
+  margin-top: -10rem;
+}
+
+@media (max-width: 600px) {
+  .home .content .home-content {
+    margin-left: -5rem;
+  }
+}
+
+.home .content .home-content .text.one {
+  padding: 1rem 0;
+}
+
+.home .content .home-content .text.one h1 {
+  font-size: 3rem;
+}
+
+@media (max-width: 600px) {
+  .home .content .home-content .text.one h1 {
+    font-size: 2rem;
+  }
+}
+
+.home .content .text.two {
+  width: 100%;
+  padding: 1rem 0;
+  font-size: 4rem;
+  font-weight: 600;
+}
+
+@media (max-width: 600px) {
+  .home .content .text.two {
+    font-size: 2.5rem;
+  }
+}
+
+.home .content .text.two span {
+  font-size: 4rem;
+  color: crimson;
+}
+
+@media (max-width: 600px) {
+  .home .content .text.two span {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .home .content .text.three {
+    font-size: 2rem;
+  }
+}
+
+.home .content .text.three h1 {
+  font-weight: 300;
+  font-size: 3rem;
+}
+
+@media (max-width: 600px) {
+  .home .content .text.three h1 {
+    font-size: 2rem;
+  }
+}
+
+.home .content .text.three h1 span {
+  font-weight: 400;
+  font-size: 3rem;
+  color: crimson;
+}
+
+@media (max-width: 600px) {
+  .home .content .text.three h1 span {
+    font-size: 2rem;
+  }
+}
+
+.home .content .text.three h1 .txt-type .txt {
+  border-right: .1rem solid #fff;
+  width: 100%;
+}
+
+@media (max-width: 600px) {
+  .home .content .text.three h1 .txt-type .txt {
+    font-size: 2rem;
+  }
+}
+
+.home .content .button {
+  padding: 4rem 0;
+}
+
+@media (max-width: 600px) {
+  .home .content .button {
+    padding: 3rem  0;
+  }
+}
+
+.home .content .button a {
+  font-size: 2rem;
+  padding: .8rem 2rem;
+  background: linear-gradient(to left, crimson, #111);
+  color: #fff;
+  transition: all .1s ease-in-out;
+  border: .1rem solid crimson;
+}
+
+@media (max-width: 600px) {
+  .home .content .button a {
+    left: .5rem;
+  }
+}
+
+.home .content .button a:hover {
+  background-color: transparent;
+  color: crimson;
+}
+
+@media (max-width: 600px) {
+  .home .content .button a {
+    font-size: 1.5rem;
+  }
+}
+/*# sourceMappingURL=style.css.map */
