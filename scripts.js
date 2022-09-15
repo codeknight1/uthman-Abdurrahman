@@ -88,8 +88,4 @@ window.onscroll = ()=>{
 }
 
 
-var  uthman = {
-				Name:"dev";
-				occupation:"front-end developer"
-				skills:"JavaScript"
-}
+/////
